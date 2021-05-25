@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            {% for character in characters %}
+            <a href="{%url 'edit_character' character.id %}">Edit</a>
+            <a href="{%url 'delete_character' character.id %}">Eliminar</a>
+            <div class="card">
+                <div class="imgBx">
+                    <a><img src="{{character.image}}"></a>
+                </div>
+                <div class="content">
+                    <h2>{{character.name}}</h2>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+{% endblock %}

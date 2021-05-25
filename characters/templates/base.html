@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <link rel="stylesheet" href="{% static 'css/style_characters.css'%}">
+</head>
+
+<body>
+    <header>
+        <img src="{% static 'images/pex.jpg'%}" class="banner">
+        <a href="{%url 'home' %}" class="logo">Project</a>
+        <div class="toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="{%url 'save_character' %}">crear personaje</a></li>
+                <li><a href="{%url 'save_universe' %}">crear universo</a></li>
+                <li><a href="{%url 'characters' %}">Personajes</a></li>
+                <li><a href="{%url 'universes' %}">Universos</a></li>
+                <li><a href="{%url 'logout' %}">cerrar sesión</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!---- Contenido cambiante ---->
+    {% block content %}
+
+    {% endblock %}
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+
+
+</body>
+
+
+</html>

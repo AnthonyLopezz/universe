@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<form action="{%url 'update_universe' universe.id %}" method="POST" >
+    {%csrf_token%}
+    {{ form.as_p }}
+    <input type="submit" value="Edit">
+</form>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+body {
+background-color: #212121;
+
+.card {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    padding: 1%;
+    font-size: 1.5em;
+    height: 365px;
+    width: 800px;
+    margin: 50px;
+    border-radius: 7px;
+    -webkit-box-shadow: 4px 4px 31px -5px rgba(107,106,107,1);
+    -moz-box-shadow: 4px 4px 31px -5px rgba(107,106,107,1);
+    box-shadow: 4px 4px 31px -5px rgba(107,106,107,1);
+    background-color: white;
+}
+
+.card-img {
+    width: 385px;
+    height: 350px;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.card-img img {
+    height: 350px;
+    border-radius: 7px 0 0 7px;
+    height: auto;
+}
+.gradient-text{
+    font-size: 10em;
+    background: white;
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    z-index: 1001;
+}
+
+
+form input[type="submit"] {
+    border: 1px solid #ff5d56;
+    color: #000000;
+    background-color: #ff5d56;
+}
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}

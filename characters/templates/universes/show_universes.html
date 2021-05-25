@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+       {% for universe in universes %}
+        <a href="{%url 'edit_universe' universe.id %}">Edit</a>
+        <a href="{%url 'delete_universe' universe.id %}">Eliminar</a>
+
+
+        <div class="card" >
+          <div class="card-content">
+            <h2>{{universe.name}}</h2>
+            <p>{{universe.date_foundation}}</p>
+          </div>
+        </div>
+
+        {% endfor %}
+
+{% endblock %}

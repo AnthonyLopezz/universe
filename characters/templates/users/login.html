@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <section>
+        <img src="{% static 'images/.jpg'%}">
+        <div class="imgBx"> </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Login</h2>
+                <form action="{%url 'login' %}" method="post">
+                    {%csrf_token%}
+                    <div class="inputBx">
+                        <span>Username</span>
+                        <input type="text" name="username">
+                    </div>
+                    <div class="inputBx">
+                        <span>Password</span>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Sign in" name="">
+                    </div>
+                </form>
+                {% if error %}
+                <h4>{{ error}}</h4>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
